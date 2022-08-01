@@ -1,0 +1,98 @@
+import java.lang.Math;
+import java.util.Scanner;
+
+public class switchsciencal {
+
+    public static void main(String args[]) {
+        Scanner s = new Scanner(System.in);
+        int x, y;
+        double a, b, c;
+        float z;
+        char choice;
+        char ch;
+
+        System.out.println("choose the operator(+:add,-sub,*:mul,/:div,s:sin function,c:cos,t:tan,q:square root,p:power)");
+        choice = s.next().charAt(0);
+
+        switch (choice) {
+            case '+':
+                System.out.println("Enter your first number:");
+                x = s.nextInt();
+                System.out.println("Enter your second number:");
+                y = s.nextInt();
+
+                z = x + y;
+                System.out.println("result=" + z);
+                break;
+            case '-':
+                System.out.println("Enter your first number:");
+                x = s.nextInt();
+                System.out.println("Enter your second number:");
+                y = s.nextInt();
+
+                z = x - y;
+                System.out.println("result=" + z);
+                break;
+            case '*':
+                System.out.println("Enter your first number:");
+                x = s.nextInt();
+                System.out.println("Enter your second number:");
+                y = s.nextInt();
+
+                z = x * y;
+                System.out.println("result=" + z);
+                break;
+            case '/':
+                System.out.println("Enter your first number:");
+                x = s.nextInt();
+                System.out.println("Enter your second number:");
+                y = s.nextInt();
+
+                z = x / y;
+                System.out.println("result=" + z);
+                break;
+
+            case 's':
+                System.out.println("Enter your number:");
+                a = s.nextInt();
+                b = Math.sin(a);
+                System.out.println("result=" + b);
+                break;
+
+            case 'c':
+                System.out.println("Enter your number:");
+                a = s.nextInt();
+                b = Math.cos(a);
+                System.out.println("result=" + b);
+                break;
+
+            case 't':
+                System.out.println("Enter your number:");
+                a = s.nextInt();
+                b = Math.tan(a);
+                System.out.println("result=" + b);
+                break;
+
+            case 'q':
+                System.out.println("Enter your number:");
+                a = s.nextInt();
+                b = Math.sqrt(a);
+                System.out.println("result=" + b);
+                break;
+
+            case 'p':
+                System.out.println("Enter your first number:");
+                a = s.nextInt();
+                System.out.println("Enter your second number:");
+                c = s.nextInt();
+                b = Math.pow(a, c);
+                System.out.println("result=" + b);
+                break;
+
+            default:
+                System.out.println("No result!!");
+                break;
+
+        }
+    }
+}
